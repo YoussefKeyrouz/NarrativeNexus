@@ -99,3 +99,6 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/URPProjectSettings.asset
+
+# TextMeshPro Examples & Extras (huge, not needed for production)
+/Assets/TextMesh Pro/
