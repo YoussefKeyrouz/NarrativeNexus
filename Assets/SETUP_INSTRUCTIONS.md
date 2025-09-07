@@ -1,6 +1,7 @@
 # Narrative Nexus - Setup Instructions
 
 ## Prerequisites
+
 - Unity 2022.3 LTS or newer
 - URP 2D project template
 - TextMeshPro package (will be prompted to install)
@@ -8,17 +9,20 @@
 ## Manual Unity Setup Steps
 
 ### 1. Install TextMeshPro
+
 1. Open **Window > Package Manager**
 2. Search for "TextMeshPro" 
 3. Click **Install**
 4. When prompted, click **Import TMP Essentials**
 
 ### 2. Create Scenes
+
 1. In **Assets/Scenes/**, create two new scenes:
    - Right-click > **Create > Scene** → Name: `MainMenu`
    - Right-click > **Create > Scene** → Name: `StoryGameplay`
 
 ### 3. Setup MainMenu Scene
+
 1. Open `MainMenu.unity`
 2. **Create Canvas:**
    - Hierarchy → **UI > Canvas**
@@ -50,6 +54,7 @@
    - Leave **Available Stories** empty for now (will add after creating sample story)
 
 ### 4. Setup StoryGameplay Scene
+
 1. Open `StoryGameplay.unity`
 2. **Create Canvas:**
    - Hierarchy → **UI > Canvas** (Screen Space - Overlay)
@@ -87,12 +92,14 @@
      - Assign **Background Image** = BackgroundImage (if created)
 
 ### 5. Build Settings
+
 1. **File > Build Settings**
 2. Click **Add Open Scenes** while MainMenu is open
 3. Open StoryGameplay scene, click **Add Open Scenes** again
 4. Ensure **MainMenu** is index 0, **StoryGameplay** is index 1
 
 ### 6. Create Sample Story
+
 1. In Unity menu: **Narrative Nexus > Create Sample Story**
 2. This creates `Assets/StoryData/Sample_ForestAdventure.asset`
 3. Return to MainMenu scene
@@ -104,6 +111,7 @@
 ## Testing the Setup
 
 ### Basic Flow Test:
+
 1. **Play MainMenu scene**
 2. **Verify:** Story button appears with "Sample: Forest Adventure"
 3. **Click the story button**
@@ -118,24 +126,28 @@
 12. **Verify:** Returns to MainMenu scene
 
 ### Validation Test:
+
 1. **Narrative Nexus > Validate All Stories**
 2. **Check Console:** Should show "✓ Sample: Forest Adventure - No issues found"
 
 ## Troubleshooting
 
 ### Common Issues:
+
 - **"No TextMeshPro found"**: Install TMP package and import essentials
 - **"Story button has no text"**: Ensure button prefab has TextMeshProUGUI child
 - **"No pending story found"**: Make sure GameManager.PendingStory is set in StorySelectionUI
 - **"Missing references"**: Double-check all component assignments in inspectors
 
 ### Console Warnings to Ignore:
+
 - Shader compilation warnings (normal for URP)
 - "No story loaded" when first opening StoryGameplay scene directly
 
 ## Next Steps
 
 ### Adding More Stories:
+
 1. **Create > Narrative Nexus > Story Data**
 2. Fill in Story ID, Title, Start Node ID
 3. Add nodes with unique IDs
@@ -144,12 +156,14 @@
 6. Add to StorySelectionUI's Available Stories array
 
 ### Adding Conditions:
+
 1. In Choice component, expand **Condition**
 2. Set **Condition Type** to "Flag"
 3. Set **Flag Key** and **Flag Value**
 4. Use GameState.SetFlag() in code to control availability
 
 ### Custom Editor Tools:
+
 - **Narrative Nexus > Create Sample Story**: Creates demo content
 - **Narrative Nexus > Validate All Stories**: Checks all story assets
 - **Narrative Nexus > Create Prefab Setup README**: Detailed prefab instructions
