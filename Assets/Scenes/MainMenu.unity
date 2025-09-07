@@ -798,6 +798,7 @@ MonoBehaviour:
   storyButtonPrefab: {fileID: 4491019741036831172, guid: 3ded94710efeae94ca46b7e450538297, type: 3}
   availableStories:
   - {fileID: 11400000, guid: fab170748c870714ea951fe27d13cea7, type: 2}
+  - {fileID: 11400000, guid: f001f775a3c074a49a5f7ebeac167d6e, type: 2}
 --- !u!4 &1002127336
 Transform:
   m_ObjectHideFlags: 0
