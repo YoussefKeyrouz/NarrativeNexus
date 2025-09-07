@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889e8d9cb15d2894b88f01ffae7b0046, type: 3}
+  m_Name: MyNewStory
+  m_EditorClassIdentifier: Assembly-CSharp::NarrativeNexus.Narrative.StoryData
+  storyId: MyNewStory
+  title: MyNewStory
+  startNodeId: N-F7B97C
+  nodes:
+  - id: N-F7B97C
+    text: test 1
+    choices:
+    - text: continue1
+      targetNodeId: N-6E4E43
+      condition:
+        conditionType: 0
+        flagKey: 
+        flagValue: 0
+    - text: New Choice
+      targetNodeId: N-CFE51A
+      condition:
+        conditionType: 0
+        flagKey: 
+        flagValue: 0
+    background: {fileID: 0}
+  - id: N-6E4E43
+    text: test 1a
+    choices: []
+    background: {fileID: 0}
+  - id: N-CFE51A
+    text: test 2
+    choices:
+    - text: Continue 2
+      targetNodeId: N-CAD219
+      condition:
+        conditionType: 0
+        flagKey: 
+        flagValue: 0
+    background: {fileID: 0}
+  - id: N-CAD219
+    text: test 2a
+    choices: []
+    background: {fileID: 0}
